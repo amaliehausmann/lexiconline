@@ -1,0 +1,64 @@
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
+
+.navStyling {
+  background-color: $green;
+  position: relative;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 2vw 0;
+      width: 12vw;
+      z-index: 999;
+      text-align: center;
+
+      a {
+        @extend %karla;
+        color: $pureWhite;
+        font-weight: 100;
+        font-size: 2vw;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bigCircle {
+  width: 21vw;
+  height: 21vw;
+  position: absolute;
+  bottom: -120%;
+  background-color: $green;
+  border-radius: 9999px;
+  right: 40%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  div {
+    width: 5.5vw;
+    height: 5.5vw;
+    position: absolute;
+    border-radius: 999px;
+    background-color: $dustyGreen;
+    display: flex;
+    justify-content: center;
+    bottom: 8%;
+    align-items: center;
+    z-index: 10;
+
+    img {
+      width: 3vw;
+      height: 43w;
+    }
+  }
+}
