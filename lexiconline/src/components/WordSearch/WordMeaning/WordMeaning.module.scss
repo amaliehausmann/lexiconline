@@ -1,0 +1,39 @@
+.sectionStyling{
+    padding: 2vw 0;
+    margin: 0 4vw;
+
+    &:nth-child(2){
+        border-bottom: solid black 1px;
+    }
+
+    &:nth-child(3){
+        border-bottom: solid black 1px;
+    }
+
+    .classSection{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5vw;
+
+        h3{
+            text-decoration: underline;
+            margin-top: -3.5vw;
+        }
+    }
+
+    h2{
+        text-transform: capitalize;
+
+    }
+
+    ol{
+
+        li{
+            text-transform: capitalize;
+        }
+    }
+
+    ul{
+        list-style: none;
+    }
+}

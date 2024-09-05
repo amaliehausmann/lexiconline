@@ -1,0 +1,33 @@
+@use '../../../styles/placeholders' as *;
+@use '../../../styles/variables' as *;
+
+.searchedWordStyling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+    div{
+        background-color: $white;
+        height: 5vw;
+        width: 5vw;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 3vw;
+        }
+    }
+
+    h1{
+        text-transform: capitalize;
+        color: $green;
+        @extend %karma;
+        font-weight: 100;
+        font-size: 4vw;
+        padding: 0 2vw;
+        margin-top: 1vw;
+        margin-bottom: 0;
+    }
+
+}
