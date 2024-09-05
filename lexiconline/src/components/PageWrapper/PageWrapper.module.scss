@@ -1,0 +1,10 @@
+@use '../../styles/placeholders' as *;
+@use '../../styles/variables' as *;
+.pageStyling{
+    background-color: $pureWhite;
+    width: 90vw;
+    height: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px 3px rgba(0,0,0,0.2);
+}

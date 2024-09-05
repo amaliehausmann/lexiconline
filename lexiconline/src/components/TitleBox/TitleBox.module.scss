@@ -1,0 +1,21 @@
+@use '../../styles/placeholders' as *;
+@use '../../styles/variables' as *;
+
+.titleBoxStyle{
+    background-color: $white;
+    height: 20vw;
+    border-radius: 20px;
+    width: 80vw;
+    text-align: center;
+    margin: 0 10vw;
+    margin-top: -10vw;
+
+    h1{
+        color: $gray;
+        @extend %karla;
+        font-weight: 400;
+        padding-top: 2vw;
+        font-size: 3vw;
+    }
+
+}

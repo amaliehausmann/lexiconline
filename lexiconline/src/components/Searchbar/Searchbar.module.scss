@@ -1,0 +1,36 @@
+@use '../../styles/placeholders' as *;
+@use '../../styles/variables' as *;
+
+.searchbarStyling{
+    margin-top: 3vw;
+
+    input{
+        @extend %karla;
+        border: $green 1px solid;
+        padding: 1.5vw 2vw;
+        width: 32vw;
+        border-radius: 100px;
+        font-size: 2vw;
+        color: $gray;
+
+        ::placeholder{
+            color: $gray;
+        }
+    }
+
+    button{
+        background-color: $green;
+        color: $pureWhite;
+        border: $green 1px solid;
+        font-size: 2vw;
+        padding: 1.5vw 0;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        margin-left: -2vw;
+        font-weight: 100;
+        @extend %karla;
+        padding-right: 4vw;
+        padding-left: 1vw;
+    }
+
+}

@@ -1,3 +1,9 @@
+@use '../src/styles/placeholders' as *;
+@use '../src/styles/variables' as *;
+
+
 body{
   margin: 0;
+  position: relative;
+  background-color: $white;
 }

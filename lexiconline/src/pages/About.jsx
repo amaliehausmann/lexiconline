@@ -1,9 +1,10 @@
 import { PageTitle } from "../components/Pagetitle/Pagetitle";
+import { TitleBox } from "../components/TitleBox/TitleBox";
 export function About() {
   return (
     <div>
       <PageTitle pageTitle="About"></PageTitle>
-      <h1>About</h1>
+      <TitleBox title='About Lexiconline'></TitleBox>
     </div>
   );
 }
