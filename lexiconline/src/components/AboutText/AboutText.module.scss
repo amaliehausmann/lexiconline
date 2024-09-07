@@ -1,0 +1,29 @@
+@use '../../styles/placeholders' as *;
+@use '../../styles/variables' as *;
+
+.abouttextStyling{
+    padding: 8vw 6vw;
+    @extend %karla;
+
+    p{
+        font-size: 1.7vw;
+
+        span{
+            text-decoration: underline;
+        }
+
+    }
+
+    h2{
+        margin: 4vw 0  2vw 0;
+        font-size: 2.2vw;
+        font-weight: 400;
+    }
+
+    ul{
+
+        li{
+            font-size: 1.7vw;
+        }
+    }
+}

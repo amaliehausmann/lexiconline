@@ -11,7 +11,7 @@ export function WordMeaning({
   
     return (
       <section className={style.sectionStyling}>
-        <h2>{wordClass}</h2>
+        <h2>{wordClass}:</h2>
         <section className={style.classSection}>
   
         {definitions.length > 0 && (
@@ -43,22 +43,22 @@ export function WordMeaning({
         {synonyms.length > 0 && (
           <section>
             <h3>Synonyms:</h3>
-            <ol>
+            <ul>
               {synonyms.map((synonym, index) => (
                 <li key={index}>"{synonym}"</li>
               ))}
-            </ol>
+            </ul>
           </section>
         )}
   
         {antonyms.length > 0 && (
           <section>
             <h3>Antonyms:</h3>
-            <ol>
+            <ul>
               {antonyms.map((antonym, index) => (
                 <li key={index}>"{antonym}"</li>
               ))}
-            </ol>
+            </ul>
           </section>
         )}
         </section>

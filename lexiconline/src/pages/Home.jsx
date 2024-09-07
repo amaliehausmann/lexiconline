@@ -1,14 +1,14 @@
 import { PageTitle } from "../components/Pagetitle/Pagetitle";
 import { TitleBox } from "../components/TitleBox/TitleBox";
 import { Searchbar } from "../components/Searchbar/Searchbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageWrapper } from "../components/PageWrapper/PageWrapper";
 import { SearchedWord } from "../components/WordSearch/SearchedWord/SearchedWord";
 import { WordMeaning } from "../components/WordSearch/WordMeaning/WordMeaning";
 
 export function Home() {
   const [wordData, setWordData] = useState(null);
-  const [searchedWord, setSearchedWord] = useState('');
+  const [searchedWord, setSearchedWord] = useState('hello');
 
   async function SearchWord() {
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchedWord}`;
@@ -19,10 +19,14 @@ export function Home() {
     console.log(data[0]);
   }
 
+  useEffect(() => {
+    SearchWord('hello');
+  }, [])
+
   return (
     <div>
       <PageTitle pageTitle="Home"></PageTitle>
-      <TitleBox title='Enter a word to search for'>
+      <TitleBox title='Enter a word to search for'  styling='titleBoxStyle'>
         <Searchbar
           action={() => SearchWord()}
           input={(e) => setSearchedWord(e.target.value)}
