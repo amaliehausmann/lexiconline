@@ -17,6 +17,16 @@
     padding-top: 2vw;
     font-size: 3vw;
   }
+
+  @media screen and (max-width: 800px) {
+    margin-top: -15vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 4.5vw;
+    }
+  }
 }
 
 .aboutTitleBox {
@@ -34,5 +44,19 @@
     font-weight: 400;
     padding-top: 5vw;
     font-size: 3vw;
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-top: -15vw;
+    h1 {
+        font-size: 4vw;
+      }
+  }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 4.5vw;
+      padding-top: 7vw;
+    }
   }
 }

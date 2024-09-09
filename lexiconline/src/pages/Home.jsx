@@ -23,6 +23,17 @@ export function Home() {
     SearchWord('hello');
   }, [])
 
+  function playAudio(audioPath){
+    const audio = new Audio(audioPath);
+    console.log(audioPath);
+    audio.play();
+  }
+
+  function searchRelatedWord(word){
+    setSearchedWord(word);
+    SearchWord(word);
+  }
+
   return (
     <div>
       <PageTitle pageTitle="Home"></PageTitle>
@@ -33,7 +44,7 @@ export function Home() {
         ></Searchbar>
       </TitleBox>
       <PageWrapper>
-        {wordData && <SearchedWord word={wordData.word}></SearchedWord>}
+        {wordData && <SearchedWord word={wordData.word} action={() => playAudio(wordData.phonetics[0].audio)}></SearchedWord>}
         {wordData?.meanings.map((meaning, index) => (
           <WordMeaning
             key={index}
@@ -44,6 +55,8 @@ export function Home() {
             }))}
             synonyms={meaning.synonyms || []}
             antonyms={meaning.antonyms || []}
+            synonymClick={searchRelatedWord}
+            antonymClick={searchRelatedWord}
           />
         ))}
       </PageWrapper>

@@ -1,62 +1,122 @@
-@use '../../../styles/placeholders' as *;
-@use '../../../styles/variables' as *;
+@use "../../../styles/placeholders" as *;
+@use "../../../styles/variables" as *;
 
-.sectionStyling{
-    padding: 2vw 0;
-    margin: 0 4vw;
+.sectionStyling {
+  padding: 2vw 0;
+  margin: 0 4vw;
 
-    &:nth-child(2){
-        border-bottom: solid black 1px;
+  &:nth-child(2) {
+    border-bottom: solid black 1px;
+  }
+
+  &:nth-child(3) {
+    border-bottom: solid black 1px;
+  }
+
+  .classSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10vw;
+    margin-bottom: 2vw;
+
+    h3 {
+      text-decoration: underline;
+      margin-top: -3vw;
+      @extend %karma;
+      font-weight: 100;
+      font-size: 1.5vw;
+    }
+  }
+
+  h2 {
+    text-transform: capitalize;
+    @extend %karma;
+    color: $green;
+    font-size: 2vw;
+    margin: 0;
+    margin-top: 2vw;
+    font-weight: 100;
+  }
+
+  ol {
+    li {
+      text-transform: capitalize;
+      @extend %karma;
+      font-size: 1.5vw;
+      padding: 2vw 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-left: -2vw;
+
+    li {
+      @extend %karma;
+      font-size: 1.5vw;
+      text-transform: capitalize;
+      padding: 2vw 0;
+
+      span {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .classSection {
+      grid-template-columns: 1fr;
+
+      h3 {
+        font-size: 3vw;
+      }
     }
 
-    &:nth-child(3){
-        border-bottom: solid black 1px;
+    h2 {
+      font-size: 4vw;
     }
 
-    .classSection{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10vw;
-        margin-bottom: 2vw;
-
-        h3{
-            text-decoration: underline;
-            margin-top: -3vw;
-            @extend %karma;
-            font-weight: 100;
-        }
+    ol {
+      li {
+        font-size: 3vw;
+      }
     }
 
-    h2{
-        text-transform: capitalize;
-        @extend %karma;
-        color: $green;
-        font-size: 2vw;
-        margin: 0;
-        margin-top: 2vw;
-        font-weight: 100;
-
-    }
-
-    ol{
-
-        li{
-            text-transform: capitalize;
-            @extend %karma;
-            font-size: 1.5vw;
-            padding: 2vw 0;
-        }
-    }
-
-    ul{
-        list-style: none;
+    ul {
+      li {
+        font-size: 3vw;
         margin-left: -2vw;
-
-        li{
-            @extend %karma;
-            font-size: 1.5vw;
-            text-transform: capitalize;
-            padding: 2vw 0;
-        }
+      }
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 4vw 0;
+    margin: 0 8vw;
+    .classSection {
+      grid-template-columns: 1fr;
+
+      h3 {
+        font-size: 4vw;
+      }
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    ol {
+      li {
+        font-size: 4vw;
+      }
+    }
+
+    ul {
+      li {
+        font-size: 4vw;
+        margin-left: -5vw;
+      }
+    }
+  }
 }

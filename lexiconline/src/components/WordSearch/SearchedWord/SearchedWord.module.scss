@@ -1,33 +1,69 @@
-@use '../../../styles/placeholders' as *;
-@use '../../../styles/variables' as *;
+@use "../../../styles/placeholders" as *;
+@use "../../../styles/variables" as *;
 
-.searchedWordStyling{
+.searchedWordStyling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vw;
+  flex-direction: row;
+  div {
+    background-color: $white;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 2vw;
-    div{
-        background-color: $white;
-        height: 5vw;
+
+    img {
+      width: 3vw;
+    }
+  }
+
+  h1 {
+    text-transform: capitalize;
+    color: $green;
+    @extend %karma;
+    font-weight: 100;
+    font-size: 4vw;
+    padding: 0 2vw;
+    margin-top: 1vw;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-top: 4vw;
+    flex-direction: row;
+
+    div {
+      width: 7vw;
+      height: 7vw;
+
+      img {
         width: 5vw;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-
-        img{
-            width: 3vw;
-        }
+      }
     }
 
-    h1{
-        text-transform: capitalize;
-        color: $green;
-        @extend %karma;
-        font-weight: 100;
-        font-size: 4vw;
-        padding: 0 2vw;
-        margin-top: 1vw;
-        margin-bottom: 0;
+    h1 {
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 2vw;
+    flex-direction: column-reverse;
+
+    div {
+      width: 9vw;
+      height: 9vw;
+
+      img {
+        width: 7vw;
+      }
     }
 
+    h1 {
+      font-size: 9vw;
+    }
+  }
 }

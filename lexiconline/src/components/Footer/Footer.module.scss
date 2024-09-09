@@ -1,52 +1,123 @@
-@use '../../styles/placeholders' as *;
-@use '../../styles/variables' as *;
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
 
-.footerStyling{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color: $green;
-    padding: 4vw 4vw;
+.footerStyling {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: $green;
+  padding: 4vw 4vw;
+  gap: 4vw;
+
+  section {
+    p {
+      color: $pureWhite;
+      @extend %karma;
+      margin: 0.2vw;
+      font-weight: 100;
+      font-size: 1.2vw;
+
+      a {
+        color: $pureWhite;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .logoStyling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+      background-color: $dustyGreen;
+      width: 4.5vw;
+      height: 4.5vw;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+
+      img {
+        width: 3vw;
+      }
+    }
+
+    h6 {
+      color: $pureWhite;
+      @extend %marck;
+      font-size: 1.5vw;
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 6vw 8vw;
+    gap: 2vw;
+
+    section {
+      p {
+        font-size: 2.5vw;
+
+        a {
+          font-size: 2.5vw;
+        }
+      }
+    }
+
+    .logoStyling {
+      display: block;
+      margin-left: 0;
+
+      div {
+        height: 9vw;
+        width: 9vw;
+        margin-left: 1vw;
+
+        img {
+          width: 6vw;
+        }
+      }
+
+      h6 {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 6vw 8vw;
     gap: 4vw;
 
-    section{
-        p{
-            color: $pureWhite;
-            @extend %karma;
-            margin: 0.2vw;
-            font-weight: 100;
-            font-size: 1.2vw;
+    section {
+      p {
+        font-size: 4vw;
 
-            a{
-                color: $pureWhite;
-                text-decoration: none;
-            }
+        a {
+          font-size: 4vw;
         }
+      }
     }
 
-    .logoStyling{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        div{
-            background-color: $dustyGreen;
-            width: 4.5vw;
-            height: 4.5vw;
-            display: flex;
-            justify-content: center;
-            border-radius: 50%;
+    .logoStyling {
+      display: block;
+      margin: auto;
+      margin-top: 5vw;
 
-            img{
-                width: 3vw;
-            }
-        }
+      div {
+        height: 15vw;
+        width: 15vw;
+        margin-left: 2vw;
 
-        h6{
-            color: $pureWhite;
-            @extend %marck;
-            font-size: 1.5vw;
-            font-weight: 100;
-            margin: 0;
+        img {
+          width: 10vw;
         }
+      }
+
+      h6 {
+        font-size: 5vw;
+      }
     }
+  }
 }

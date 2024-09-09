@@ -1,29 +1,61 @@
-@use '../../styles/placeholders' as *;
-@use '../../styles/variables' as *;
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
 
-.abouttextStyling{
-    padding: 8vw 6vw;
-    @extend %karla;
+.abouttextStyling {
+  padding: 8vw 6vw;
+  @extend %karla;
 
-    p{
-        font-size: 1.7vw;
+  p {
+    font-size: 1.7vw;
 
-        span{
-            text-decoration: underline;
-        }
+    span {
+      text-decoration: underline;
+    }
+  }
 
+  h2 {
+    margin: 4vw 0 2vw 0;
+    font-size: 2.2vw;
+    font-weight: 400;
+  }
+
+  ul {
+    li {
+      font-size: 1.7vw;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 2.5vw;
     }
 
-    h2{
-        margin: 4vw 0  2vw 0;
-        font-size: 2.2vw;
-        font-weight: 400;
+    h2 {
+      font-size: 4vw;
+      margin: 8vw 0 4vw 0;
     }
 
-    ul{
-
-        li{
-            font-size: 1.7vw;
-        }
+    ul {
+      li {
+        font-size: 2.5vw;
+      }
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    p {
+      font-size: 3.5vw;
+    }
+
+    h2 {
+      font-size: 6vw;
+      margin: 10vw 0 4vw 0;
+    }
+
+    ul {
+      li {
+        font-size: 3.5vw;
+      }
+    }
+  }
 }
